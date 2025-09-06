@@ -15,7 +15,7 @@ public class Usuario {
 		this.curso = curso;
 	}
 
-	public String geradorMatricula() {
+	private String geradorMatricula() {
         LocalDateTime agora = LocalDateTime.now();
 
 		//formata o anos, mês, dia e hora
@@ -28,4 +28,16 @@ public class Usuario {
 		//concatena a data formatada com o número aleatório
         return dataFormatada + numeroAleatorio;
     }
+
+	public String getNome(){
+		return nome;
+	}
+
+	public String getCurso(){
+		return curso;
+	}
+
+	public String getMatricula(){
+		return matricula;
+	}
 }
