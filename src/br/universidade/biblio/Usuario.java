@@ -28,6 +28,7 @@ public class Usuario {
 		//concatena a data formatada com o número aleatório
         return dataFormatada + numeroAleatorio;
     }
+
 	//Setters
 	public void setNome(String nome){
 		this.nome = nome; 
@@ -39,7 +40,8 @@ public class Usuario {
 		this.matricula = geradorMatricula();
 	}
 	*/
-
+	
+	//Getters
 	public String getNome(){
 		return nome;
 	}
