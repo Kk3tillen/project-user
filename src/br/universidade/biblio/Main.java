@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Livros Emprestados: ");
         /*if (u2.getEmprestimos().length > 0){
             for (Usuario livro : u2.getEmprestimos()){
-                System.out.println(livro.getTitulo);// PERGUNTAR AO GRUPO DO LIVRO QUAL VAI SER O NOME DO ATRIBUTO DO TITULO
+                System.out.println(livro.getTitulo);
         }
     } else{ System.out.println("Nenhum empréstimo feito!");}*/
 
