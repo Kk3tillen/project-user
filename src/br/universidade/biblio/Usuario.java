@@ -7,12 +7,14 @@ public class Usuario {
 	private String nome;
 	private String matricula;
 	private String curso;
+	//private Livro[] listaDeEmprestimos;
 	
 	// Construtor
 	public Usuario(String nome, String curso) {
 		this.nome = nome;
 		this.matricula = geradorMatricula();
 		this.curso = curso;
+		//this.listaDeEmprestimos = new Usuario[10]; //COMBINAR COM OUTRO GRUPO QUANTOS EMPRESTIMOS UM USR PODE FAZER (Default: 10)
 	}
 
 	private String geradorMatricula() {
@@ -36,21 +38,25 @@ public class Usuario {
 	public void setCurso(String curso){
 		this.curso = curso;
 	}
-/* public void setMatricula(){
+	/*public void setMatricula(){
 		this.matricula = geradorMatricula();
 	}
 	*/
 	
 	//Getters
 	public String getNome(){
-		return nome;
+		return this.nome;
 	}
 
 	public String getCurso(){
-		return curso;
+		return this.curso;
 	}
 
 	public String getMatricula(){
-		return matricula;
+		return this.matricula;
 	}
+
+	/*public Usuario[] getEmprestimos(){
+		return this.listaDeEmprestimos;
+	}*/
 }
