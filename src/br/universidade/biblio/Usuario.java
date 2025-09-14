@@ -2,12 +2,13 @@ package br.universidade.biblio;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
+import java.util.ArrayList;
 
 public class Usuario {
 	private String nome;
 	private String matricula;
 	private String curso;
-	//ArrayList<Livro> listaDeEmprestimos;
+	private ArrayList<Livro> listaDeEmprestimos;
 	
 	
 	// Construtor
@@ -15,7 +16,7 @@ public class Usuario {
 		this.nome = nome;
 		this.matricula = geradorMatricula();
 		this.curso = curso;
-		//this.listaDeEmprestimos = new ArrayList<>();
+		this.listaDeEmprestimos = new ArrayList<>();
 	}
 
 	private String geradorMatricula() {
@@ -32,6 +33,10 @@ public class Usuario {
         return dataFormatada + numeroAleatorio;
     }
 
+	public void adicionarEmprestimo(Livro livro){
+        listaDeEmprestimos.add(livro);
+    }
+
 	//Setters
 	public void setNome(String nome){
 		this.nome = nome; 
@@ -39,9 +44,6 @@ public class Usuario {
 	public void setCurso(String curso){
 		this.curso = curso;
 	}
-	/*public void setMatricula(){
-		this.matricula = geradorMatricula();
-	}*/
 	
 	//Getters
 	public String getNome(){
@@ -56,7 +58,7 @@ public class Usuario {
 		return this.matricula;
 	}
 
-	/*public ArrayList<Livro> getEmprestimos(){
+	public ArrayList<Livro> getEmprestimos(){
 		return this.listaDeEmprestimos;
-	}*/
+	}
 }
